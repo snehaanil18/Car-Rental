@@ -1,0 +1,105 @@
+.rentLease{
+    margin: 40px 0px;
+}
+
+.rentLease h2 {
+    text-align: center;
+    margin: 30px 20px;
+    font-weight: 400;
+    font-size: 34px;
+}
+
+.threeSteps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* card */
+.steps h3 {
+    color: #E21E26;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    margin: 10px 20px;
+    font-weight: 400;
+    font-size: 34px;
+}
+
+
+.stepContent {
+    height: 180px;
+    width: 350px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 10px 20px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stepContent p {
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 18.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stepContent img {
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px) {
+    .rentLease{
+        margin-bottom: 20px;
+    }
+    
+    .rentLease h2 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+
+    }
+
+    .threeSteps {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .steps {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .steps h3 {
+        font-family: Poppins;
+        font-size: 28.45px;
+        font-weight: 400;
+        line-height: 22.76px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .stepContent {
+        height: 167px;
+        width: calc(100%-100px);
+        margin: 0px;
+        text-align: center;
+    }
+
+    .stepContent p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 17.44px;
+        text-align: center;
+
+    }
+}
