@@ -1,5 +1,6 @@
 .rentLease{
     margin: 40px 0px;
+    font-family: poppins;
 }
 
 .rentLease h2 {
@@ -7,13 +8,14 @@
     margin: 30px 20px;
     font-weight: 400;
     font-size: 34px;
+    cursor: default
 }
 
 .threeSteps {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    cursor: default
 }
 
 /* card */

@@ -11,3 +11,24 @@
 .main{
   padding: 10px 20px;
 }
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* gap: 10px; */
+  right: 0;
+  margin-right: 0;
+  top: 140px;
+  z-index: 1000;
+}
+
+.sideIcon{
+  position: relative;
+}
+
+#icon{
+  position: absolute;
+  top: 7px;
+  left: 11px;
+}

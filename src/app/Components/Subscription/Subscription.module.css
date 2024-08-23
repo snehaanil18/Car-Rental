@@ -1,0 +1,230 @@
+.subscribe {
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0px 40px;
+}
+
+.phonePara {
+    display: none;
+}
+
+.subscribeForm,
+.linkSection {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.subscribeForm {
+    padding: 50px 70px 0px 0px;
+
+}
+
+
+.subscribeForm h2 {
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.subscribeForm input {
+    padding: 10px;
+    border: none;
+    background-color: #F8F8F8;
+    border-radius: 7px;
+}
+
+.inputForm {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+.subscribeForm p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.subscribeForm button {
+    background-color: #E21E26;
+    margin-top: 30px;
+    width: 100%;
+    border: none;
+    padding: 12px;
+    color: white;
+}
+
+.linkSection {
+    display: flex;
+    background-color: #E21E26;
+
+}
+
+
+
+.mobileImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkForm {
+    margin: 50px 40px 20px 10px;
+}
+
+.linkForm p {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    margin-top: 30px;
+}
+
+
+.linkForm input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #F8F8F8;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+.linkForm button {
+    background-color: black;
+    color: white;
+    padding: 8px 32px 8px 32px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+}
+
+#playStores {
+    margin-top: 25px;
+}
+
+.appImg {
+    display: flex;
+    gap: 10px;
+}
+
+.appImg button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+
+.linkSectionPhone {
+    display: none;
+}
+
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .subscribe {
+        flex-direction: column;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .subscribeForm h2 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+
+    }
+
+    .subscribeForm p {
+        display: none;
+    }
+
+    .inputForm {
+        flex-direction: column;
+    }
+
+    .phonePara {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        text-align: left;
+        display: block;
+        padding: 5px;
+        width: fit-content;
+    }
+
+    .subscribeForm button {
+        padding: 9px 32px;
+        width: fit-content;
+        margin: 10px 0px;
+    }
+
+    .linkSection {
+        display: none;
+    }
+
+    .linkSectionPhone {
+        display: block;
+        background-color: #E21E26;
+        padding: 16px 10px;
+    }
+
+    .storeImgPhone {
+        display: flex;
+    }
+
+    #mobileLogo {
+        height: 245px
+    }
+
+    .linkLabelsPhone {
+        margin-top: 20px;
+        color: white;
+    }
+
+    .linkLabelsPhone p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15.6px;
+        text-align: left;
+    }
+
+    .appImg {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .appImg img {
+        height: 30px;
+    }
+
+    #messageLabel {
+        margin-top: 50px;
+
+    }
+
+    .inputLinkPhone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputLinkPhone input {
+        padding: 15px;
+        border: none;
+        background-color: #F8F8F8;
+        margin-top: 10px;
+        border-radius: 7px;
+    }
+
+    .inputLinkPhone button {
+        background-color: black;
+        color: white;
+        padding: 9px 27px;
+        width: 130px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 7px;
+    }
+}

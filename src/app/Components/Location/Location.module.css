@@ -6,6 +6,8 @@
     font-weight: 600;
     text-align: left;
     margin: 20px 60px;
+    cursor: default;
+   
 }
 
 .locations h2 {
@@ -14,7 +16,7 @@
     font-weight: 400;
     line-height: 51px;
     text-align: center;
-
+    cursor: default;
 }
 
 .places {
@@ -33,21 +35,31 @@
 }
 
 .places img {
-    margin: 0px 15px;
+    margin: 0px 10px;
 }
 
-.places p {
+
+
+.placeBox{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.placeBox p {
     font-family: Open Sans;
     font-size: 18.81px;
     font-weight: 600;
     line-height: 25.62px;
     text-align: left;
+    margin: 0;
+    text-wrap: nowrap;
 }
 
 .places .divider {
-    background-color: white;
+    background-color: rgb(141, 141, 141);
     width: 1px;
     height: 41px;
+    margin-left: 50px;
 }
 
 @media screen and (min-width: 300px) and (max-width:900px) {

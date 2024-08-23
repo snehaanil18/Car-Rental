@@ -1,0 +1,114 @@
+.bookingPhone button{
+   padding:15px 40px ; 
+}
+
+.bookingPart{
+    display: none;  
+}
+
+.inputFields input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer; 
+}
+
+.active{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 300px) and (max-width:900px){
+    .bookingPart{
+        display: block;  
+    }
+
+    .bookingPhone{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 19.5px;
+        text-align: center;
+    }
+
+    #booking{
+        background: #E21E26;
+        color: white;
+    }
+
+    #quickBook{
+        color: #E21E26;
+        border:1px solid #E21E26;
+
+    }
+
+    .searchLabels{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 56.74px;
+        letter-spacing: -0.035em;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 4px;
+        text-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .inputFields{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 10px;
+        padding: 10px 0px;
+    }
+
+    .location{
+        position: relative;
+    }
+
+    .location select{
+        padding: 5px 10px;
+        width: 328px;
+        height: 42px;
+        background: #F6F7F9;
+        appearance: none;
+        padding-left: 30px;
+        border-radius: 15px;
+    }
+
+    #locationIcon{
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+
+    #dropDown{
+        position: absolute;
+        right: 10px;
+        top: 17px;
+    }
+
+    .dateTime{
+        position: relative;
+    }
+
+    .dateTime input{
+        width: 328px;
+        height: 42px;
+        padding: 5px 10px;
+        background: #F6F7F9;
+        padding-left: 30px;
+        border-radius: 15px;
+    }
+
+    #calender{
+        position: absolute;
+        top: 12px;
+        left: 10px;
+    }
+}

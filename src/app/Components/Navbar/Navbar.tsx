@@ -1,20 +1,53 @@
 "use client"
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
-import styles from './Navbar.module.css'; // Import your CSS module
+import styles from './Navbar.module.css'; 
 import Link from 'next/link';
-
+import fbicon from '../../../../public/Images/fb.svg'
+import igicon from '../../../../public/Images/instagram.svg'
+import xicon from '../../../../public/Images/x.svg'
+import linkedinicon from '../../../../public/Images/linkedin.svg'
+import logo from '../../../../public/Images/logo-1.png'
+import notification from '../../../../public/Images/notification_1.svg'
+import menu from '../../../../public/Images/menu.svg'
+import close from '../../../../public/Images/close.svg'
 
 export default function Navbar(){
 
     const [isOpen,setIsOpen] = useState(false)
+
+    type social = {
+        href:string,
+        src: StaticImageData;
+        alt: string;
+    }
+
+    type navArray ={
+        href: string;
+        text: string;
+    }
+
+    const navElements : navArray[] = [
+        {href:'/',text:"About"},
+        {href:'/',text:"Offers"},
+        {href:'/',text:"Coporate"},
+        {href:'/',text:"Personal"},
+        {href:'/',text:"Locations"},
+        {href:'/',text:"Contact Us"},
+    ]
+
+    const socialMedia: social[] = [
+        {href:'https://www.facebook.com/',src:fbicon , alt: "Facebook"},
+        {href:'https://www.instagram.com/',src:igicon, alt:'Instagram'},
+        {href:'https://x.com/',src:xicon, alt: "x"},
+        {href:'https://www.linkedin.com/',src:linkedinicon , alt: "Linkedin"},
+    ]
 
     const openNav = () => {
         setIsOpen(true)
     }
 
     const closeNav = () => {
-        console.log('closed');
         setIsOpen(false)
     }
 
@@ -23,45 +56,28 @@ export default function Navbar(){
             <div className={styles.navbar}>
                 <div className={styles.socialMedia}>
                     <ul>
-                        <li>
-                            <a href="">
-                                <Image src="\Images\fb.svg" alt='' width={17} height={17} layout='responsive' />
+                        {socialMedia.map((item,index) => 
+                        <li key={index}>
+                            <a href={item.href} target='_blank'>
+                                <Image src={item.src} alt={item.alt} width={17} height={17} layout='responsive' />
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <Image src="\Images\instagram.svg" alt='' width={17} height={17} layout='responsive' />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <Image src="\Images\x.svg" alt='' width={17} height={17} layout='responsive' />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <Image src="\Images\linkedin.svg" alt='' width={17} height={17} layout='responsive' />
-                            </a>
-                        </li>
+                        )}
                     </ul>
                 </div>
 
                 <div className={styles.navElements}>
                     <div className={styles.logo}>
-                        <Image src="/Images/logo-1.png" alt='logo' height={53} width={355} />
+                        <Image src={logo} alt='logo' height={53} width={355} />
                     </div>
 
                     <div className={styles.navMenu}>
                         <ul id={styles.navList}>
-                            <li><Link href={'/'}>About</Link></li>
-                            <li><Link href={'/'}>Offers</Link></li>
-                            <li><Link href={'/'}>Coporate</Link></li>
-                            <li><Link href={'/'}>Personal</Link></li>
-                            <li><Link href={'/'}>Locations</Link></li>
-                            <li><Link href={'/'}>Contact Us</Link></li>
+                            {navElements.map((listItem,index) => 
+                            <li key={index}><Link href={listItem.href}>{listItem.text}</Link></li>)}
                             <li id={styles.navMenuButtons}>
                                 <button id={styles.notifications}>
-                                    <Image src='\Images\notification_1.svg' alt="" height={20} width={20} />
+                                    <Image src={notification} alt="notification" height={20} width={20} />
                                 </button>
                                 <button id={styles.user}>
                                     <span id={styles.letter}>J</span><span id={styles.name}>John Doe</span>
@@ -72,7 +88,7 @@ export default function Navbar(){
                         {/* menu icon for mobile devices  */}
                         <div className={styles.menuButton}>
                             <button id={styles.menu} onClick={()=> openNav()}>
-                                <Image src='\Images\menu.svg' alt='' height={20} width={20} />
+                                <Image src={menu} alt='menu' height={20} width={20} />
                             </button>
                         </div>
 
@@ -89,21 +105,16 @@ export default function Navbar(){
             {/* navbar  for mobile devices*/}
             <div id={styles.sidebar} className={`${styles.menuSidebar} ${isOpen ? styles.active : styles.menuSidebar}`}>
                 <button id={styles.closeButton} onClick={()=> closeNav()}>
-                    <Image  src="\Images\close.svg" alt="" width={18} height={18}/>
+                    <Image  src={close} alt="close" width={18} height={18}/>
                 </button>
                 <div className={styles.sidenavMenuItems}>
-                    <Link href={'/'}>About</Link>
+                
+                    {navElements.map((menuItem,index) => 
+                    <div key={index}>
+                    <Link href={menuItem.href}>{menuItem.text}</Link>
                     <hr />
-                    <Link href={'/'}>Offers</Link>
-                    <hr />
-                    <Link href={'/'}>Coporate</Link>
-                    <hr />
-                    <Link href={'/'}>Personal</Link>
-                    <hr />
-                    <Link href={'/'}>Locations</Link>
-                    <hr />
-                    <Link href={'/'}>Contact Us</Link>
-                    <hr />
+                    </div>
+                    )}
                     <button id={styles.loginSignup}>Login / Sign Up</button>
                 </div>
             </div>
