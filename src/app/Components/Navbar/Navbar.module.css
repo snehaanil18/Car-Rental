@@ -46,12 +46,12 @@
     margin-left: 32px;
 }
 
-.navMenu ul li:hover{
+.navMenu ul li a:hover{
     color: rgb(143, 143, 143);
 }
 
 
-.navMenu ul Link{
+.navMenu ul a{
     text-decoration: none;
     padding: 10px 0px;
     display: inline-block;

@@ -22,6 +22,12 @@
 
 }
 
+.phoneError{
+    color: white;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
 
 .subscribeForm h2 {
     font-size: 34px;
@@ -29,16 +35,29 @@
 }
 
 .subscribeForm input {
-    padding: 10px;
+    padding: 0px 10px;
+    outline: none;
     border: none;
     background-color: #F8F8F8;
     border-radius: 7px;
+    width: 200px;
+    height: 45px;
 }
 
 .inputForm {
     display: flex;
     gap: 30px;
     padding: 20px;
+}
+
+.inputs{
+    flex-direction: column;
+}
+
+.error{
+    font-size: 13px;
+    color: #E21E26;
+    font-weight: bolder;
 }
 
 .subscribeForm p {
@@ -53,6 +72,7 @@
     border: none;
     padding: 12px;
     color: white;
+    cursor: pointer;
 }
 
 .linkSection {
@@ -90,6 +110,7 @@
     border-radius: 7px;
 }
 
+
 .linkForm button {
     background-color: black;
     color: white;
@@ -97,6 +118,7 @@
     margin-top: 20px;
     border: none;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 #playStores {
@@ -136,12 +158,17 @@
 
     }
 
+    .subscribeForm input{
+        width: 100%;
+    }
+
     .subscribeForm p {
         display: none;
     }
 
     .inputForm {
         flex-direction: column;
+        padding: 0px 10px;
     }
 
     .phonePara {

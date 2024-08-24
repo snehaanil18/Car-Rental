@@ -1,3 +1,4 @@
+/* container */
 .questions{
     margin: 10px 20px;
     padding: 0px 20px;
@@ -8,6 +9,7 @@
     padding: 16px 40px;
 }
 
+/* question */
 .questions h2 {
     font-family: Poppins;
     font-size: 34px;
@@ -28,6 +30,7 @@
     cursor: pointer;
 }
 
+/* open icon */
 .questionRow button {
     border: none;
     background: transparent;
@@ -38,6 +41,7 @@
     background-color: #ccc;
 }
 
+/* answer  */
 .answer {
     font-size: 14px;
     font-weight: 400;

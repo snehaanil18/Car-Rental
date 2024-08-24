@@ -45,7 +45,7 @@
     margin: 10px;
 }
 
-.listedContents Link {
+.listedContents a {
     color: white;
     text-decoration: none;
 }
@@ -171,6 +171,7 @@
         justify-content: center;
         gap: 20px;
         text-wrap: nowrap;
+        list-style-type: none;
     }
 
 

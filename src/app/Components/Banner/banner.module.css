@@ -1,3 +1,4 @@
+/* set style for container */
 .slideContainer {
     position: relative;
     margin: 10px 50px;
@@ -8,6 +9,7 @@
     width: 100%;
 }
 
+/* style and align the text */
 .bannerText {
     width: fit-content;
     text-align: left;
@@ -32,6 +34,7 @@
     outline: none;
 }
 
+/* style for slides */
 .active{
     display: block;
 }
@@ -40,12 +43,13 @@
     display: none;
 }
 
+/* button indicator position */
 .indicator{
     position: absolute;
     display: flex;
-    gap: 10px;
-    bottom: 10%;
-    left: 50%;
+    gap: 8px;
+    bottom: 15%;
+    left: 48%;
     transition: background-color 0.3s ease;
 }
 
@@ -56,6 +60,7 @@
 
 }
 
+/* active and inactive styles for button */
 .activeIndicator{
     background-color: white;
 }
@@ -64,6 +69,7 @@
     background-color: rgb(175, 175, 175);
 }
 
+
 @media screen and (min-width: 300px) and (max-width:900px){
     .slideContainer{
         margin: 0px;
@@ -71,15 +77,20 @@
     }
 
     #bannerImg{
-        height: 200px;
-        background-size:cover;
+        height: auto;
+        object-fit: cover;
+        min-height: 217px;
+        width: 100%;
     }
 
     .bannerText {
+        justify-content: center;
+        align-items: center;
         font-size: 9.8px;
         font-weight: 400;
         line-height: 14.35px;
-        left: 38%;
+        left: 30%;
+        top: 52%;
     }
 
     .bannerText button {
@@ -87,6 +98,7 @@
     }
 
     .indicator{
-        bottom: 5%;
+        bottom: 12%;
+        left: 39%;
     }
 }

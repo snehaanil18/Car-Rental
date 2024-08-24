@@ -13,8 +13,10 @@ import Booking from '../Booking/Booking';
 
 export default function Search() {
 
+    // state to store active tab
     const [activeTab, setActiveTab] = useState('tab1')
 
+    // switch tab based on button click
     const switchTabs = (tab: string) => {
         setActiveTab(tab)
     }
@@ -23,6 +25,7 @@ export default function Search() {
         <div>
             <div className={styles.search}>
                 <div className={styles.searchLabels}>
+                    {/* labels for tabs */}
                     <button onClick={() => switchTabs('tab1')} className={`tab ${activeTab === 'tab1' ? styles.active : ''}`}>
                         Same as Pick up
                     </button>
@@ -38,6 +41,7 @@ export default function Search() {
                     </button>
                 </div>
 
+                {/* content of tab1 */}
                 <div>
                     {activeTab == 'tab1' && (
                         <div className={styles.inputFields}>
@@ -73,6 +77,7 @@ export default function Search() {
                     )}
                 </div>
 
+                    {/* content of tab2 */}
                 <div>
                     {activeTab == 'tab2' && (
                         <div className={styles.inputFields}>
@@ -110,6 +115,7 @@ export default function Search() {
                     )}
                 </div>
 
+                    {/* links to download */}
                 <div className={styles.downloadLinks}>
                     <p>Download our App for easy accessibility anytime, anywhere!</p>
                     <div className={styles.stores}>

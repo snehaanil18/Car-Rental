@@ -13,7 +13,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      <div>
+      <div className="page">
         <div className="icons">
           <button>
             <Image src={phoneicon} alt='phone' width={48} height={45} />

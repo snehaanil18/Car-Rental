@@ -14,19 +14,23 @@ import close from '../../../../public/Images/close.svg'
 
 export default function Navbar(){
 
+    // state to track click event
     const [isOpen,setIsOpen] = useState(false)
 
+    // type for social media array
     type social = {
         href:string,
         src: StaticImageData;
         alt: string;
     }
 
+    // type navbar elements
     type navArray ={
         href: string;
         text: string;
     }
 
+    // content of navbar
     const navElements : navArray[] = [
         {href:'/',text:"About"},
         {href:'/',text:"Offers"},
@@ -36,6 +40,7 @@ export default function Navbar(){
         {href:'/',text:"Contact Us"},
     ]
 
+    // social media links
     const socialMedia: social[] = [
         {href:'https://www.facebook.com/',src:fbicon , alt: "Facebook"},
         {href:'https://www.instagram.com/',src:igicon, alt:'Instagram'},
@@ -43,10 +48,12 @@ export default function Navbar(){
         {href:'https://www.linkedin.com/',src:linkedinicon , alt: "Linkedin"},
     ]
 
+    // click event for opening sidenav
     const openNav = () => {
         setIsOpen(true)
     }
 
+    // click event for closing sidenav
     const closeNav = () => {
         setIsOpen(false)
     }
@@ -55,6 +62,7 @@ export default function Navbar(){
         <section>
             <div className={styles.navbar}>
                 <div className={styles.socialMedia}>
+                    {/* map social media links */}
                     <ul>
                         {socialMedia.map((item,index) => 
                         <li key={index}>
@@ -67,6 +75,7 @@ export default function Navbar(){
                 </div>
 
                 <div className={styles.navElements}>
+                    {/* logo */}
                     <div className={styles.logo}>
                         <Image src={logo} alt='logo' height={53} width={355} />
                     </div>
@@ -74,6 +83,7 @@ export default function Navbar(){
                     <div className={styles.navMenu}>
                         <ul id={styles.navList}>
                             {navElements.map((listItem,index) => 
+                            // map navbar links for different pages
                             <li key={index}><Link href={listItem.href}>{listItem.text}</Link></li>)}
                             <li id={styles.navMenuButtons}>
                                 <button id={styles.notifications}>
@@ -95,6 +105,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
+                {/* moving text */}
                 <div className={styles.text}>
                     <p>Sunday Pick Up/Drop-Off only at Dubai Silicon Oasis & Habtoor Grand
                         Sales Counters | All Rates inclusive of VAT. T&C’s apply | Follow us

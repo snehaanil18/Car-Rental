@@ -1,3 +1,4 @@
+/* button styles */
 .bookingPhone button{
    padding:15px 40px ; 
 }
@@ -6,11 +7,13 @@
     display: none;  
 }
 
+/* hide the default calender icon */
 .inputFields input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     cursor: pointer; 
 }
 
+/* style for active tab */
 .active{
     text-decoration: underline;
 }
@@ -20,6 +23,7 @@
         display: block;  
     }
 
+    /* container styles */
     .bookingPhone{
         display: flex;
         flex-direction: row;
@@ -44,6 +48,7 @@
 
     }
 
+    /* style for tab heading */
     .searchLabels{
         font-size: 13px;
         font-weight: 400;
@@ -67,6 +72,7 @@
         padding: 10px 0px;
     }
 
+    /* location drop down styles */
     .location{
         position: relative;
     }
@@ -93,6 +99,7 @@
         top: 17px;
     }
 
+    /* input field styles */
     .dateTime{
         position: relative;
     }

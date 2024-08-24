@@ -3,8 +3,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: 10px 50px;
-    height: 227px;
-    padding: 30px 45px;
+    height: 180px;
+    padding: 20px 45px;
     position: relative;
 }
 
@@ -15,6 +15,9 @@
 
 .searchLabels button select{
     background: transparent;
+    color: white;
+    border: none;
+    padding: 5px;
 }
 
 .active{
@@ -44,7 +47,7 @@
 #locationIcon{
     position: absolute;
     left: 8px;
-    top: 13px;
+    top: 14px;
 }
 
 #dropDown{
@@ -59,7 +62,9 @@
     height: 42px;
     width: 188px;
     padding-left: 25px;
-    font-size: 14px
+    font-size: 14px;
+    outline: none;
+    border: none;
 }
 
 .inputFields input[type="datetime-local"]::-webkit-calendar-picker-indicator {
@@ -132,7 +137,7 @@
     }
 
     .search{
-        height: 150px;
+        height: 80px;
         margin: 10px;
         padding: 36px;
         background-size: cover;

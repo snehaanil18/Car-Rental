@@ -7,17 +7,22 @@ import Image from 'next/image';
 
 
 export default function Faq(){
+    // state to track click event
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+    // function for displaying content based on click event
     const toggleAccordion = (id: number) => {
         setOpenIndex(openIndex === id ? null : id);
     };
+
+    // set up type for content
     type faq = {
         id:number,
         question:string,
         answer:string
     }
 
+    // contents of frequently asked questions
     const details:faq[] = [
         {id:1 ,question:"What is my eligibility to book a car?" , answer:"You should be 18 years old or above and you must possess a valid driving license."},
         {id:2 , question:"Can I opt car for a longer period?" , answer:"You should be 18 years old or above and you must possess a valid driving license."},
@@ -35,6 +40,7 @@ export default function Faq(){
             <div className={styles.questionRow}>
               <p className="question">{faq.question}</p>
               <div>
+                {/* based on index of button click call function */}
                 <button onClick={() => toggleAccordion(faq.id)} className={styles.accordion}>
                     <Image src={openIndex === faq.id ? close : expand} alt={openIndex === faq.id ? 'close button' : 'expand button'} width={15} height={15} />
                 </button>

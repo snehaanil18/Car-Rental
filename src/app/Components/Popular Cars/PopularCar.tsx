@@ -8,6 +8,7 @@ import styles from './popularCar.module.css'
 
 export default function PopularCars(){
 
+    // set up type for details array
     type CarData = {
         src:StaticImageData,
         alt:string,
@@ -17,6 +18,7 @@ export default function PopularCars(){
         amount:string
     }
 
+    // contents of the car array
     const cars:CarData[] = [
         {src:car1,alt:"Mitsubishi Eclipse",name:"Mitsubishi Eclipse",details:"Eclipse Cross is a fusion of sharp coupe looks and dynamic SUV mobility with signature Mitsubishi styling, technology and driving confidence.",feature:feature1,amount:"AED 2700/ Monthly"},
         {src:car2,alt:"Jac J7",name:"Jac J7",details:"S3 Plus has been rated Five-Star in C-NCAP including front impact, side impact, frontal side impact & Whipping test.",feature:feature2,amount:"AED 2700/ Monthly"}
@@ -28,7 +30,7 @@ export default function PopularCars(){
           <h2>Most Popular Cars</h2>
 
           <div className={styles.cards}>
-
+            {/* map the details of array */}
             {cars.map((car,index) => 
             <div key={index} className={styles.carCards}>
               <Image src={car.src} alt={car.alt} height={290} width={360} />
@@ -39,7 +41,7 @@ export default function PopularCars(){
                 </p>
                 <div className={styles.features}>
                   <Image className={styles.featureImg} src={car.feature} alt={car.alt} width={300}  />
-                  {/* <Image id="feature-phone" src="./Images/phone-feature.svg" alt="" /> */}
+
                 </div>
                 <div className={styles.bookingPart}>
                   <p>{car.amount} </p>
