@@ -1,6 +1,5 @@
 .rentLease{
     margin: 40px 0px;
-    font-family: poppins;
 }
 
 .rentLease h2 {
@@ -82,7 +81,6 @@
     }
 
     .steps h3 {
-        font-family: Poppins;
         font-size: 28.45px;
         font-weight: 400;
         line-height: 22.76px;
