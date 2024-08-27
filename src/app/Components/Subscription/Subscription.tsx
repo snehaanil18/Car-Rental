@@ -125,11 +125,11 @@ export default function Subscription(){
             </div>
             <div className={styles.phonePara}>
               Please select the ways you would like to hear from Diamondlease,
-              and confirm that you’re happy for us to store your data in line
+              and confirm that you&apos;re happy for us to store your data in line
               with our Privacy Policy.
             </div>
             <p>
-              Don't miss out! enter your email and your name, then hit
+              Don&apos;t miss out! enter your email and your name, then hit
               subscribe to unlock a world of special offers and details.
             </p>
             <button onClick={() => handleSubmit()}>Subscribe</button>

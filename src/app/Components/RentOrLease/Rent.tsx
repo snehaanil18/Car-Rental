@@ -26,8 +26,8 @@ export default function Rent() {
         <h2>Rent/Lease In three easy steps</h2>
         <div className={styles.threeSteps}>
           {/* map the steps */}
-          {rentSteps.map(step =>
-            <div className={styles.steps}>
+          {rentSteps.map((step,index )=>
+            <div key={index} className={styles.steps}>
               <h3 className="stepNumber">{step.no}</h3>
               <div className={styles.stepContent}>
 
